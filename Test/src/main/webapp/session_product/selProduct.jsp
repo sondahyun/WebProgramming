@@ -6,6 +6,12 @@
 		String username = request.getParameter("username");
 		String userpw = request.getParameter("userpw");
 	
+		//세션은 같은 브라우저에서 로그인을 하더라도 세션 자체는 동일하게 유지됩니다. 
+		// 그러나 로그인 여부에 따라 세션 내에 저장되는 값은 달라질 수 있습니다. 
+		// 예를 들어, 사용자가 로그인할 때 아이디나 권한 같은 정보를 세션에 저장하게 되는데, 이 저장된 정보는 사용자가 로그인한 상태에 따라 다를 수 있습니다.
+
+		// 즉, 같은 브라우저에서 서로 다른 계정으로 로그인할 경우, 동일한 세션 ID를 가진 세션에 서로 다른 사용자 정보가 저장되는 방식입니다. 
+		// 각 계정에 따른 새로운 세션이 생성되는 것이 아니라, 기존 세션에 다른 데이터를 저장하게 되는 것입니다.
 		if(username.equals("admin") && userpw.equals("1234")) 
 		{
 			session.setAttribute("username",request.getParameter("username"));
