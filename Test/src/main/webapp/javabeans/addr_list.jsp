@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="ch07.*"%>
+<%@ page import="javabeans.*"%>
 
 <!DOCTYPE html>
 <!-- 자바빈즈 선언 -->
+<jsp:useBean id="am" class="javabeans.AddrManager" scope="application"/>
 
 <html>
 <head>
@@ -30,7 +31,8 @@
 	<table>
 	<tr><td>이름</td><td>전화번호</td><td>이메일</td><td>성별</td></tr>
 	<%
-		for(AddrBean ab : am.getAddrList()) {
+		//한 사람에 대한 주소: AddrBean -> 위에서 import
+		for(AddrBean ab : am.getAddrList()) { // list를 return
 	%>
 		<tr>
 		<td><%=ab.getUsername() %></td>

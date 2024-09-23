@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="ch07.*" %>
+<%@ page import="javabeans.*" %>
 <!DOCTYPE html>
-<jsp:useBean id="am" class="ch07.AddrManager" scope="application"/>
+<jsp:useBean id="am" class="javabeans.AddrManager" scope="application"/>
 <%
 	request.setCharacterEncoding("UTF-8");
 	//이름으로 주소록 검색하는 함수 호출하는 코드 작성
+	AddrBean addr = am.getAddr(request.getParameter("sname"));
 %>
 <html>
 <head>

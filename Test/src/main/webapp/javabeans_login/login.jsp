@@ -11,7 +11,7 @@
 <div align=center>
 <H2>로그인 예제</H2>
 <HR>
-<% 
+<% // 화면 출력만 해서 코드 깔끔
 	if(!login.checkUser()) { // login = java클래스의 인스턴스
 		out.println("로그인 실패 !!");	
 	}
@@ -24,6 +24,7 @@
 사용자 아이디 : 
 <!--getProperty 로 아이디  출력하는 코드 작성-->
 <jsp:getProperty name="login" property="userid"/><BR>
+<% login.getUserid(); %>
 사용자 패스워드 : 
 <!--getProperty 로 비밀번호 출력하는 코드 작성 -->
 <jsp:getProperty name="login" property="passwd"/><BR>

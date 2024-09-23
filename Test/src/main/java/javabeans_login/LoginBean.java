@@ -10,7 +10,7 @@ public class LoginBean {
 	final String _userid ="myuser";
 	final String _passwd="1234";
 	
-	public  boolean checkUser() {
+	public  boolean checkUser() { // 비밀번호 검증 (T, F)
 		if (userid.equals(_userid)&& passwd.equals(_passwd))
 			return true;
 		else
