@@ -7,7 +7,7 @@ package jstl;
  */
 public class Member {
 
-	// ȸ�� ���� ��� ����
+	// 회워 정보 멤버 변수
 	private String name;
 	private String email;
 	
@@ -16,9 +16,9 @@ public class Member {
 		this.email = email;
 	}
 	
-	// �⺻ �������� ��� ������ ���� �ű� ������ �ʱ�ȭ
+	// 기본 생성자의 경우 다음과 같이 신규 정보로 초기화
 	public Member() {
-		name="ȫ�浿";
+		name="홍길동";
 		email="test@test.net";
 	}
 
